@@ -3,7 +3,7 @@ import { useEffect } from 'react'
 
 export function useScrollAnimation() {
     useEffect(() => {
-        const elements = document.querySelectorAll('.fade-up')
+        const elements = document.querySelectorAll('.fade-up, .title-reveal')
 
         const observer = new IntersectionObserver(
             (entries) => {

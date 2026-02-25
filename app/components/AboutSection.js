@@ -7,8 +7,8 @@ export default function AboutSection() {
                 <div className="grid lg:grid-cols-2 gap-24 items-start">
 
                     {/* Left: Text */}
-                    <div className="fade-up">
-                        <h2 className="text-4xl lg:text-5xl font-black leading-tight mb-8">
+                    <div className="">
+                        <h2 className="text-4xl lg:text-5xl font-black leading-tight mb-8 title-reveal">
                             Infraestructura para el{' '}
                             <span className="text-gold-gradient">crecimiento panregional</span>
                         </h2>

@@ -28,8 +28,8 @@ export default function WhySection() {
         <section id="why" className="py-24 pb-32">
             <div className="max-w-7xl mx-auto px-6">
                 {/* Header */}
-                <div className="max-w-3xl mb-20 fade-up">
-                    <h2 className="text-4xl lg:text-5xl font-black leading-tight mb-8">
+                <div className="max-w-3xl mb-20">
+                    <h2 className="text-4xl lg:text-5xl font-black leading-tight mb-8 title-reveal">
                         Por qué las empresas líderes eligen{' '}
                         <span className="text-gold-gradient">I Biz MKT</span>
                     </h2>

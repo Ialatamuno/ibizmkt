@@ -20,8 +20,8 @@ export default function PillarsSection() {
         <section id="pillars" className="py-24 pb-32">
             <div className="max-w-7xl mx-auto px-6">
                 {/* Header */}
-                <div className="max-w-3xl mb-20 fade-up">
-                    <h2 className="text-4xl lg:text-5xl font-black leading-tight mb-8">
+                <div className="max-w-3xl mb-20">
+                    <h2 className="text-4xl lg:text-5xl font-black leading-tight mb-8 title-reveal">
                         Arquitectura estratégica para su{' '}
                         <span className="text-gold-gradient">departamento de marketing</span>
                     </h2>

@@ -23,8 +23,8 @@ export default function ContactSection() {
             <div className="max-w-7xl mx-auto px-6">
                 <div className="grid lg:grid-cols-[1fr_1.5fr] gap-24 items-start">
                     {/* Left: Info */}
-                    <div className="fade-up">
-                        <h2 className="text-4xl lg:text-5xl font-black leading-tight mb-8">
+                    <div className="">
+                        <h2 className="text-4xl lg:text-5xl font-black leading-tight mb-8 title-reveal">
                             Diseñe su <span className="text-gold-gradient">estrategia regional</span>
                         </h2>
                         <p className="text-[#8892a4] text-lg lg:text-xl leading-relaxed font-medium mb-12">

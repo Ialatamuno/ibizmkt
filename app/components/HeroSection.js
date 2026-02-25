@@ -38,10 +38,12 @@ export default function HeroSection() {
             <div className="relative z-10 max-w-7xl mx-auto px-6 w-full">
                 <div className="max-w-4xl">
                     {/* Title */}
-                    <h1 className="text-5xl lg:text-7xl xl:text-8xl font-black leading-[1.05] tracking-tight mb-8 fade-up">
-                        Escale su presencia{' '}
-                        <span className="text-gold-gradient">regional</span> con precisión
-                    </h1>
+                    <div className="title-reveal animate-float">
+                        <h1 className="text-5xl lg:text-7xl xl:text-8xl font-black leading-[1.05] tracking-tight mb-8">
+                            Escale su presencia{' '}
+                            <span className="text-gold-gradient">regional</span> con precisión
+                        </h1>
+                    </div>
 
                     {/* Subtitle */}
                     <p className="text-[#8892a4] text-xl lg:text-2xl max-w-2xl mb-12 leading-relaxed font-medium fade-up delay-1">
