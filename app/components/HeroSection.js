@@ -30,87 +30,56 @@ export default function HeroSection() {
         <section
             id="hero"
             ref={sectionRef}
-            className="relative min-h-screen flex items-center overflow-hidden pt-28 pb-20"
+            className="relative min-h-screen flex items-center overflow-hidden pt-32 pb-20"
         >
-            {/* Radial background blobs */}
-            <div className="absolute inset-0 pointer-events-none">
-                <div className="absolute top-1/4 right-1/4 w-[600px] h-[600px] rounded-full bg-[#1a3a6b]/40 blur-[120px]" />
-                <div className="absolute bottom-1/3 left-1/4 w-[400px] h-[400px] rounded-full bg-[#c9a227]/10 blur-[100px]" />
-            </div>
+            {/* Stripe-style Mesh Background */}
+            <div className="bg-mesh" />
 
-            <div className="relative z-10 max-w-6xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
-                {/* Left: Text */}
-                <div className="fade-up">
+            <div className="relative z-10 max-w-7xl mx-auto px-6 w-full">
+                <div className="max-w-4xl">
                     {/* Title */}
-                    <h1 className="text-4xl lg:text-5xl xl:text-6xl font-black leading-[1.1] tracking-tight mb-6">
-                        Su Socio Estratégico en{' '}
-                        <span className="text-gold-gradient inline-block hover:scale-[1.02] transition-transform duration-500 cursor-default">
-                            Marketing B2B
-                        </span>{' '}
-                        y Eventos Corporativos
+                    <h1 className="text-5xl lg:text-7xl xl:text-8xl font-black leading-[1.05] tracking-tight mb-8 fade-up">
+                        Escale su presencia{' '}
+                        <span className="text-gold-gradient">regional</span> con precisión
                     </h1>
 
                     {/* Subtitle */}
-                    <p className="text-[#8892a4] text-base lg:text-lg max-w-lg mb-10 leading-relaxed font-medium">
-                        Con más de 10 años de experiencia, transformamos las necesidades de su empresa
-                        en resultados tangibles desde el corazón de América Latina.
+                    <p className="text-[#8892a4] text-xl lg:text-2xl max-w-2xl mb-12 leading-relaxed font-medium fade-up delay-1">
+                        La infraestructura de marketing B2B y eventos corporativos para empresas líderes.
+                        Transformamos su visión en resultados tangibles en toda América Latina.
                     </p>
 
                     {/* CTAs */}
-                    <div className="flex flex-wrap gap-5 mb-16">
+                    <div className="flex flex-wrap gap-5 mb-20 fade-up delay-2">
                         <a
                             href="#portfolio"
-                            className="group relative inline-flex items-center gap-3 bg-gradient-to-r from-[#c9a227] to-[#e8c84a] text-[#060b18] font-bold px-10 py-4 rounded-xl hover:-translate-y-1.5 hover:shadow-[0_20px_50px_rgba(201,162,39,0.5)] transition-all duration-500 overflow-hidden"
+                            className="group relative inline-flex items-center gap-3 bg-white text-[#060b18] font-bold px-10 py-4 rounded-full hover:bg-[#c9a227] hover:text-white transition-all duration-500 shadow-xl"
                         >
-                            <span className="relative z-10 flex items-center gap-2">
-                                Ver Portafolio
-                                <svg className="w-5 h-5 group-hover:translate-x-1.5 transition-transform duration-500" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7" /></svg>
-                            </span>
-                            {/* Shine effect */}
-                            <div className="absolute top-0 -left-[100%] w-full h-full bg-gradient-to-r from-transparent via-white/30 to-transparent group-hover:left-[100%] transition-all duration-1000" />
+                            Empezar ahora
+                            <svg className="w-5 h-5 group-hover:translate-x-1.5 transition-transform duration-500" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7" /></svg>
                         </a>
                         <a
                             href="#contact"
-                            className="group inline-flex items-center gap-2 border border-white/10 text-white font-semibold px-10 py-4 rounded-xl glass-card hover:border-[#c9a227]/60 hover:bg-[#c9a227]/10 hover:-translate-y-1.5 transition-all duration-500"
+                            className="group inline-flex items-center gap-2 text-white font-bold px-10 py-4 rounded-full border border-white/20 hover:bg-white/10 transition-all duration-500"
                         >
-                            Hablar con un Experto
+                            Contactar expertos
                         </a>
                     </div>
 
                     {/* Stats */}
-                    <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 pt-8 border-t border-white/06">
+                    <div className="grid grid-cols-2 md:grid-cols-4 gap-12 pt-12 border-t border-white/10 fade-up delay-3">
                         {stats.map(({ number, label }) => (
-                            <div key={number}>
-                                <div className="text-3xl font-black text-[#c9a227] glow-text leading-none mb-1">{number}</div>
-                                <div className="text-xs text-[#8892a4] leading-snug">{label}</div>
+                            <div key={number} className="group">
+                                <div className="text-4xl font-black text-white mb-2 group-hover:text-[#c9a227] transition-colors duration-500">{number}</div>
+                                <div className="text-sm text-[#8892a4] font-semibold tracking-wider uppercase">{label}</div>
                             </div>
                         ))}
                     </div>
                 </div>
-
-                {/* Right: Visual card */}
-                <div className="hidden lg:flex items-center justify-center">
-                    <div className="relative w-full max-w-md">
-                        {/* Glow ring */}
-                        <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-[#c9a227]/20 to-[#1a3a6b]/30 blur-xl" />
-                        <div className="relative glass-card rounded-3xl overflow-hidden border border-[#c9a227]/20 shadow-2xl">
-                            <Image
-                                src="/hero-image.jpg"
-                                alt="I Biz MKT — Marketing B2B y Eventos Corporativos en América Latina"
-                                width={500}
-                                height={420}
-                                className="w-full h-[420px] object-cover"
-                                priority
-                            />
-                            {/* Overlay badge */}
-                            <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-[#060b18]/90 to-transparent p-6">
-                                <p className="text-sm font-semibold text-[#c9a227]">🌎 Hub Regional · Asunción</p>
-                                <p className="text-white font-bold mt-1">Conectando empresas en toda Latinoamérica</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </div>
+
+            {/* Subtle floating element for extra "Stripe" feel */}
+            <div className="absolute top-1/2 -right-20 w-[600px] h-[600px] bg-gradient-to-br from-[#c9a227]/10 to-transparent rounded-full blur-[120px] pointer-events-none" />
         </section>
     )
 }
