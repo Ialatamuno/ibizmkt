@@ -40,40 +40,38 @@ export default function HeroSection() {
 
             <div className="relative z-10 max-w-6xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
                 {/* Left: Text */}
-                <div>
-                    {/* Badge */}
-                    <div className="inline-flex items-center gap-2 bg-[#c9a227]/10 border border-[#c9a227]/25 rounded-full px-4 py-1.5 mb-7">
-                        <span className="pulse-dot w-2 h-2 rounded-full bg-[#c9a227] block" />
-                        <span className="text-[#c9a227] text-xs font-semibold tracking-widest uppercase">
-                            Asunción, Paraguay · América Latina
-                        </span>
-                    </div>
-
+                <div className="fade-up">
                     {/* Title */}
-                    <h1 className="text-5xl lg:text-6xl xl:text-7xl font-black leading-[1.06] tracking-tight mb-6">
+                    <h1 className="text-4xl lg:text-5xl xl:text-6xl font-black leading-[1.1] tracking-tight mb-6">
                         Su Socio Estratégico en{' '}
-                        <span className="text-gold-gradient">Marketing B2B</span>{' '}
+                        <span className="text-gold-gradient inline-block hover:scale-[1.02] transition-transform duration-500 cursor-default">
+                            Marketing B2B
+                        </span>{' '}
                         y Eventos Corporativos
                     </h1>
 
                     {/* Subtitle */}
-                    <p className="text-[#8892a4] text-lg max-w-lg mb-10 leading-relaxed">
+                    <p className="text-[#8892a4] text-base lg:text-lg max-w-lg mb-10 leading-relaxed font-medium">
                         Con más de 10 años de experiencia, transformamos las necesidades de su empresa
                         en resultados tangibles desde el corazón de América Latina.
                     </p>
 
                     {/* CTAs */}
-                    <div className="flex flex-wrap gap-4 mb-16">
+                    <div className="flex flex-wrap gap-5 mb-16">
                         <a
                             href="#portfolio"
-                            className="group inline-flex items-center gap-2 bg-gradient-to-r from-[#c9a227] to-[#e8c84a] text-[#060b18] font-bold px-8 py-4 rounded-xl hover:-translate-y-1 hover:shadow-[0_12px_40px_rgba(201,162,39,0.45)] transition-all duration-300"
+                            className="group relative inline-flex items-center gap-3 bg-gradient-to-r from-[#c9a227] to-[#e8c84a] text-[#060b18] font-bold px-10 py-4 rounded-xl hover:-translate-y-1.5 hover:shadow-[0_20px_50px_rgba(201,162,39,0.5)] transition-all duration-500 overflow-hidden"
                         >
-                            Ver Portafolio
-                            <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7" /></svg>
+                            <span className="relative z-10 flex items-center gap-2">
+                                Ver Portafolio
+                                <svg className="w-5 h-5 group-hover:translate-x-1.5 transition-transform duration-500" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7" /></svg>
+                            </span>
+                            {/* Shine effect */}
+                            <div className="absolute top-0 -left-[100%] w-full h-full bg-gradient-to-r from-transparent via-white/30 to-transparent group-hover:left-[100%] transition-all duration-1000" />
                         </a>
                         <a
                             href="#contact"
-                            className="inline-flex items-center gap-2 border border-white/10 text-white font-semibold px-8 py-4 rounded-xl glass-card hover:border-[#c9a227]/40 hover:bg-[#c9a227]/05 hover:-translate-y-1 transition-all duration-300"
+                            className="group inline-flex items-center gap-2 border border-white/10 text-white font-semibold px-10 py-4 rounded-xl glass-card hover:border-[#c9a227]/60 hover:bg-[#c9a227]/10 hover:-translate-y-1.5 transition-all duration-500"
                         >
                             Hablar con un Experto
                         </a>

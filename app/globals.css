@@ -41,25 +41,27 @@ body {
 
 /* Gold gradient text */
 .text-gold-gradient {
-  background: linear-gradient(135deg, #c9a227, #e8c84a);
+  background: linear-gradient(135deg, #c9a227, #f3d47a);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  transition: transform 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
 }
 
 /* Glass card */
 .glass-card {
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(255, 255, 255, 0.07);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  transition: all 0.5s cubic-bezier(0.2, 0.8, 0.2, 1);
 }
 
 /* Animate on scroll */
 .fade-up {
   opacity: 0;
-  transform: translateY(40px);
-  transition: opacity 0.7s ease, transform 0.7s ease;
+  transform: translateY(30px);
+  transition: opacity 1s cubic-bezier(0.2, 0.8, 0.2, 1), transform 1s cubic-bezier(0.2, 0.8, 0.2, 1);
 }
 
 .fade-up.visible {
@@ -68,27 +70,27 @@ body {
 }
 
 .delay-1 {
-  transition-delay: 0.1s;
+  transition-delay: 0.15s;
 }
 
 .delay-2 {
-  transition-delay: 0.2s;
-}
-
-.delay-3 {
   transition-delay: 0.3s;
 }
 
+.delay-3 {
+  transition-delay: 0.45s;
+}
+
 .delay-4 {
-  transition-delay: 0.4s;
+  transition-delay: 0.6s;
 }
 
 /* Background grid */
 .bg-grid {
   background-image:
-    linear-gradient(rgba(201, 162, 39, 0.03) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(201, 162, 39, 0.03) 1px, transparent 1px);
-  background-size: 60px 60px;
+    linear-gradient(rgba(201, 162, 39, 0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(201, 162, 39, 0.02) 1px, transparent 1px);
+  background-size: 80px 80px;
 }
 
 /* Glowing dot pulse */
