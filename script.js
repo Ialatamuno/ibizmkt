@@ -56,6 +56,9 @@ function renderPortfolio(category) {
     const items = portfolioData[category];
     portfolioGrid.innerHTML = items.map((item, i) => `
         <div class="glass-card p-10 fade-up visible" style="transition-delay: ${i * 0.1}s">
+            <div class="portfolio-img-container">
+                <img src="assets/portfolio.png" alt="${item.title}" class="portfolio-img">
+            </div>
             <h4 class="card-title-md">${item.title}</h4>
             <p class="text-muted text-base">${item.desc}</p>
         </div>
