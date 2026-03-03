@@ -284,7 +284,8 @@ body {
 
 .btn-primary:hover {
     background: var(--primary-hover);
-    transform: translateY(-1px);
+    transform: translateY(-2px) scale(1.02);
+    box-shadow: 0 10px 20px -5px rgba(97, 97, 255, 0.4);
 }
 
 .btn-primary-lg {
@@ -442,15 +443,20 @@ body {
 
 /* Sections */
 .section {
-    padding: 6rem 0 8rem 0;
+    padding: 8rem 0;
+}
+
+.section:nth-of-type(even) {
+    background-color: var(--bg-light);
 }
 
 .section-title {
-    font-size: clamp(2rem, 5vw, 3rem);
+    font-size: clamp(2rem, 5vw, 3.5rem);
     font-weight: 900;
     line-height: 1.2;
     margin-bottom: 2rem;
     color: var(--text-main);
+    text-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
 }
 
 .text-muted {
