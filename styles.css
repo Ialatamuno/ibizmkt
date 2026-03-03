@@ -371,6 +371,7 @@ body {
     line-height: 1.05;
     letter-spacing: -0.02em;
     margin-bottom: 2rem;
+    color: var(--text-main);
 }
 
 .hero-subtitle {
@@ -449,6 +450,7 @@ body {
     font-weight: 900;
     line-height: 1.2;
     margin-bottom: 2rem;
+    color: var(--text-main);
 }
 
 .text-muted {
