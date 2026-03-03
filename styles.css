@@ -1,13 +1,16 @@
 /* Base & Variables */
 :root {
-    --bg-deep: #060b18;
-    --gold: #c9a227;
-    --gold-light: #e8c84a;
-    --blue-dark: #0d1f44;
-    --blue-mid: #1a3a6b;
-    --text-muted: #8892a4;
-    --text-main: #e8eaf0;
+    --bg-deep: #ffffff;
+    --bg-light: #f8fafc;
+    --gold: #b38e1a;
+    --gold-light: #d4af37;
+    --blue-dark: #0f172a;
+    --blue-mid: #1e293b;
+    --text-muted: #64748b;
+    --text-main: #1e293b;
     --white: #ffffff;
+    --glass-bg: rgba(255, 255, 255, 0.7);
+    --glass-border: rgba(15, 23, 42, 0.1);
     --font-inter: 'Inter', system-ui, -apple-system, sans-serif;
 }
 
@@ -336,8 +339,6 @@ body {
     display: flex;
     align-items: center;
     overflow: hidden;
-    padding-top: 8rem;
-    padding-bottom: 5rem;
     z-index: 10;
 }
 
@@ -357,7 +358,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to right, rgba(10, 24, 46, 0.9) 30%, rgba(10, 24, 46, 0.3) 100%);
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.9) 30%, rgba(255, 255, 255, 0.2) 100%);
     z-index: -1;
 }
 
