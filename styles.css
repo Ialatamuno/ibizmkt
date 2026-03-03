@@ -1,16 +1,15 @@
-/* Base & Variables */
 :root {
     --bg-deep: #ffffff;
-    --bg-light: #f8fafc;
+    --bg-light: #f1f5f9;
+    --emerald-deep: #064e3b;
+    --emerald-mid: #065f46;
+    --glass-bg: rgba(255, 255, 255, 0.8);
+    --glass-border: rgba(6, 78, 59, 0.1);
     --gold: #b38e1a;
     --gold-light: #d4af37;
-    --blue-dark: #0f172a;
-    --blue-mid: #1e293b;
-    --text-muted: #64748b;
-    --text-main: #1e293b;
+    --text-main: #064e3b;
+    --text-muted: #475569;
     --white: #ffffff;
-    --glass-bg: rgba(255, 255, 255, 0.7);
-    --glass-border: rgba(15, 23, 42, 0.1);
     --font-inter: 'Inter', system-ui, -apple-system, sans-serif;
 }
 
@@ -192,12 +191,12 @@ body {
     backdrop-filter: blur(20px);
     border-bottom: 1px solid var(--glass-border);
     padding: 1rem 0 !important;
-    background: rgba(255, 255, 255, 0.85) !important;
+    background: rgba(255, 255, 255, 0.9) !important;
 }
 
 .logo {
     text-decoration: none;
-    color: var(--blue-dark);
+    color: var(--emerald-deep);
     font-size: 1.5rem;
     font-weight: 900;
 }
@@ -270,7 +269,7 @@ body {
 
 /* Buttons */
 .btn-primary {
-    background: var(--blue-dark);
+    background: var(--emerald-deep);
     color: var(--white);
     padding: 0.75rem 2rem;
     border-radius: 9999px;
@@ -282,14 +281,13 @@ body {
 
 .btn-primary:hover {
     background: var(--gold);
-    color: var(--white);
 }
 
 .btn-primary-lg {
     display: inline-flex;
     align-items: center;
     gap: 0.75rem;
-    background: var(--blue-dark);
+    background: var(--emerald-deep);
     color: var(--white);
     padding: 1rem 2.5rem;
     border-radius: 9999px;
@@ -318,14 +316,14 @@ body {
     padding: 1rem 2.5rem;
     border-radius: 9999px;
     border: 1px solid var(--glass-border);
-    color: var(--blue-dark);
+    color: var(--emerald-deep);
     font-weight: 700;
     text-decoration: none;
     transition: all 0.5s ease;
 }
 
 .btn-outline:hover {
-    background: rgba(15, 23, 42, 0.05);
+    background: rgba(6, 78, 59, 0.05);
 }
 
 /* Hero Section */
@@ -415,7 +413,7 @@ body {
 .stat-number {
     font-size: 2.25rem;
     font-weight: 900;
-    color: var(--white);
+    color: var(--emerald-deep);
     margin-bottom: 0.5rem;
     transition: color 0.5s ease;
 }
