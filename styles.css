@@ -427,13 +427,13 @@ body {
 .stat-number {
     font-size: 2.25rem;
     font-weight: 900;
-    color: var(--emerald-deep);
+    color: var(--primary);
     margin-bottom: 0.5rem;
-    transition: color 0.5s ease;
+    transition: transform 0.3s ease;
 }
 
 .stat-item:hover .stat-number {
-    color: var(--gold);
+    transform: translateY(-5px);
 }
 
 .stat-label {
@@ -475,21 +475,21 @@ body {
 .card-title {
     font-size: 1.5rem;
     font-weight: 900;
-    color: var(--white);
+    color: var(--text-main);
     margin-bottom: 1rem;
 }
 
 .card-title-lg {
     font-size: 1.5rem;
     font-weight: 900;
-    color: var(--white);
+    color: var(--text-main);
     margin-bottom: 1rem;
 }
 
 .card-title-md {
     font-size: 1.25rem;
     font-weight: 900;
-    color: var(--white);
+    color: var(--text-main);
     margin-bottom: 1rem;
 }
 
@@ -500,17 +500,17 @@ body {
 }
 
 .tag {
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    color: var(--white);
+    background: var(--bg-light);
+    border: 1px solid var(--glass-border);
+    color: var(--text-main);
     font-size: 0.75rem;
     font-weight: 700;
-    padding: 0.5rem 1rem;
+    padding: 0.50rem 1rem;
     border-radius: 0.5rem;
 }
 
 .tag-accent {
-    color: var(--gold);
+    color: var(--primary);
     font-size: 0.75rem;
     font-weight: 900;
     text-transform: uppercase;
@@ -523,7 +523,7 @@ body {
 .stat-number-sm {
     font-size: 1.875rem;
     font-weight: 900;
-    color: var(--white);
+    color: var(--text-main);
     margin-bottom: 0.25rem;
 }
 
@@ -569,11 +569,11 @@ body {
 }
 
 .tab-btn:hover {
-    color: var(--white);
+    color: var(--primary);
 }
 
 .tab-btn.active {
-    color: var(--gold);
+    color: var(--primary);
 }
 
 .tab-btn.active::after {
@@ -582,8 +582,8 @@ body {
     bottom: 0;
     left: 0;
     right: 0;
-    height: 2px;
-    background: var(--gold);
+    height: 3px;
+    background: var(--primary);
 }
 
 /* Image Containers */
