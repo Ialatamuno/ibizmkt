@@ -1,21 +1,21 @@
 // Data
 const portfolioData = {
     events: [
-        { title: 'Ferias Internacionales', desc: 'Gestión integral llave en mano: diseño, montaje y representación en los eventos más importantes del continente.' },
-        { title: 'Roadshows Regionales', desc: 'Giras comerciales estratégicas en las plazas de mayor impacto, garantizando ejecución impecable.' },
-        { title: 'Conectividad C-Level', desc: 'Plataformas de vinculación efectiva y networking para tomadores de decisiones de alto nivel.' },
-        { title: 'Lanzamientos Premium', desc: 'Organización de congresos, seminarios y experiencias corporativas con estándares globales.' },
+        { title: 'Ferias Internacionales', desc: 'Gestión integral llave en mano: diseño, montaje y representación en los eventos más importantes del continente.', img: 'assets/ferias.png' },
+        { title: 'Roadshows Regionales', desc: 'Giras comerciales estratégicas en las plazas de mayor impacto, garantizando ejecución impecable.', img: 'assets/roadshows.png' },
+        { title: 'Conectividad C-Level', desc: 'Plataformas de vinculación efectiva y networking para tomadores de decisiones de alto nivel.', img: 'assets/conectividad.png' },
+        { title: 'Lanzamientos Premium', desc: 'Organización de congresos, seminarios y experiencias corporativas con estándares globales.', img: 'assets/lanzamientos.png' },
     ],
     marketing: [
-        { title: 'Marketing Digital B2B', desc: 'Estrategias de contenido y pauta digital optimizadas para resultados en el sector corporativo.' },
-        { title: 'Branding de Autoridad', desc: 'Desarrollo de identidad y comunicación estratégica diseñada para inspirar confianza y liderazgo.' },
-        { title: 'Producción de Impacto', desc: 'Contenido audiovisual y presentaciones de alto nivel para juntas directivas y mercados regionales.' },
-        { title: 'Trade Marketing', desc: 'Optimización de presencia en punto de venta y herramientas de soporte para fuerzas comerciales locales.' },
+        { title: 'Marketing Digital B2B', desc: 'Estrategias de contenido y pauta digital optimizadas para resultados en el sector corporativo.', img: 'assets/portfolio.png' },
+        { title: 'Branding de Autoridad', desc: 'Desarrollo de identidad y comunicación estratégica diseñada para inspirar confianza y liderazgo.', img: 'assets/portfolio.png' },
+        { title: 'Producción de Impacto', desc: 'Contenido audiovisual y presentaciones de alto nivel para juntas directivas y mercados regionales.', img: 'assets/portfolio.png' },
+        { title: 'Trade Marketing', desc: 'Optimización de presencia en punto de venta y herramientas de soporte para fuerzas comerciales locales.', img: 'assets/portfolio.png' },
     ],
     intel: [
-        { title: 'Análisis de Mercado', desc: 'Estudios profundos de competencia y viabilidad para la entrada exitosa en nuevos mercados de Latam.' },
-        { title: 'Auditoría Estratégica', desc: 'Diagnóstico de operaciones actuales y diseño de roadmaps de crecimiento a corto y mediano plazo.' },
-        { title: 'Planes de Expansión', desc: 'Consultoría especializada en las particularidades regulatorias y comerciales de cada país de la región.' },
+        { title: 'Análisis de Mercado', desc: 'Estudios profundos de competencia y viabilidad para la entrada exitosa en nuevos mercados de Latam.', img: 'assets/portfolio.png' },
+        { title: 'Auditoría Estratégica', desc: 'Diagnóstico de operaciones actuales y diseño de roadmaps de crecimiento a corto y mediano plazo.', img: 'assets/portfolio.png' },
+        { title: 'Planes de Expansión', desc: 'Consultoría especializada en las particularidades regulatorias y comerciales de cada país de la región.', img: 'assets/portfolio.png' },
     ],
 };
 
@@ -57,7 +57,7 @@ function renderPortfolio(category) {
     portfolioGrid.innerHTML = items.map((item, i) => `
         <div class="glass-card p-10 fade-up visible" style="transition-delay: ${i * 0.1}s">
             <div class="portfolio-img-container">
-                <img src="assets/portfolio.png" alt="${item.title}" class="portfolio-img">
+                <img src="${item.img}" alt="${item.title}" class="portfolio-img">
             </div>
             <h4 class="card-title-md">${item.title}</h4>
             <p class="text-muted text-base">${item.desc}</p>

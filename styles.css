@@ -196,17 +196,42 @@ body {
 
 /* Glassmorphism -> Modern Cards */
 .glass-card {
-    background: #ffffff;
-    border: 1px solid rgba(0, 0, 0, 0.05);
-    box-shadow: var(--shadow-md);
-    border-radius: 1.5rem;
-    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.95) 0%, rgba(248, 250, 252, 0.8) 100%);
+    border: 1px solid rgba(124, 58, 237, 0.08);
+    border-radius: var(--radius-lg);
+    box-shadow:
+        0 4px 6px -1px rgba(0, 0, 0, 0.05),
+        0 10px 15px -3px rgba(124, 58, 237, 0.05);
+    backdrop-filter: blur(12px);
+    transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.glass-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: var(--grad-brand);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.glass-card:hover::before {
+    opacity: 1;
 }
 
 .glass-card:hover {
-    box-shadow: var(--shadow-lg);
-    border-color: var(--primary);
-    transform: translateY(-5px);
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-xl);
+    border-color: rgba(124, 58, 237, 0.2);
+}
+
+.card-accent-border {
+    border-left: 4px solid var(--primary);
 }
 
 /* Navbar */
@@ -978,6 +1003,45 @@ textarea {
     outline: none;
     transition: all 0.2s ease;
     font-family: var(--font-main);
+}
+
+.glass-card {
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.95) 0%, rgba(248, 250, 252, 0.8) 100%);
+    border: 1px solid rgba(124, 58, 237, 0.08);
+    border-radius: var(--radius-lg);
+    box-shadow:
+        0 4px 6px -1px rgba(0, 0, 0, 0.05),
+        0 10px 15px -3px rgba(124, 58, 237, 0.05);
+    backdrop-filter: blur(12px);
+    transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.glass-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: var(--grad-brand);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.glass-card:hover::before {
+    opacity: 1;
+}
+
+.glass-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-xl);
+    border-color: rgba(124, 58, 237, 0.2);
+}
+
+.card-accent-border {
+    border-left: 4px solid var(--primary);
 }
 
 input:focus,
