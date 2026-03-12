@@ -774,7 +774,7 @@ body {
 }
 
 .contact-item .label {
-    color: var(--gold);
+    color: var(--primary);
     font-size: 0.75rem;
     font-weight: 900;
     text-transform: uppercase;
@@ -785,7 +785,7 @@ body {
 .contact-item .value {
     font-size: 1.25rem;
     font-weight: 700;
-    color: var(--white);
+    color: var(--text-main);
 }
 
 /* Form */
@@ -795,7 +795,7 @@ body {
 
 .form-group label {
     display: block;
-    color: var(--white);
+    color: var(--text-main);
     font-size: 0.875rem;
     font-weight: 700;
     margin-bottom: 0.75rem;
@@ -804,30 +804,32 @@ body {
 input,
 textarea {
     width: 100%;
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: #f8faff;
+    border: 1.5px solid rgba(97, 97, 255, 0.15);
     border-radius: 0.75rem;
     padding: 1rem 1.25rem;
-    color: var(--white);
+    color: var(--text-main);
     font-size: 1rem;
     outline: none;
     transition: all 0.2s ease;
+    font-family: var(--font-main);
 }
 
 input:focus,
 textarea:focus {
-    border-color: var(--gold);
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(97, 97, 255, 0.1);
 }
 
 input::placeholder,
 textarea::placeholder {
-    color: #555e6e;
+    color: #a0aab8;
 }
 
 .btn-submit {
     width: 100%;
-    background: var(--white);
-    color: var(--bg-deep);
+    background: var(--primary);
+    color: #ffffff;
     border: none;
     padding: 1.25rem;
     border-radius: 0.75rem;
@@ -838,12 +840,14 @@ textarea::placeholder {
     align-items: center;
     justify-content: center;
     gap: 0.75rem;
-    transition: all 0.5s ease;
+    transition: all 0.3s ease;
+    font-family: var(--font-main);
 }
 
 .btn-submit:hover {
-    background: var(--gold);
-    color: var(--white);
+    background: var(--primary-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(97, 97, 255, 0.35);
 }
 
 /* Footer */
