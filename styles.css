@@ -195,27 +195,50 @@ body {
     top: 0;
     left: 0;
     right: 0;
-    z-index: 100;
-    transition: all 0.5s ease;
+    z-index: 1000;
+    padding: 1.5rem 0;
+    transition: all 0.4s ease;
+    /* Transparent on hero (video visible) */
+    background: transparent;
 }
 
-.navbar.scrolled {
-    background: #ffffff !important;
-    backdrop-filter: none;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-    padding: 0.75rem 0 !important;
-    box-shadow: var(--shadow-md);
+/* Inner nav container: logo left, links right */
+.fixed-nav>div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
+.fixed-nav.scrolled {
+    background: rgba(255, 255, 255, 0.97) !important;
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+    padding: 0.85rem 0 !important;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* Logo: white on hero, dark when scrolled */
 .logo {
     text-decoration: none;
-    color: var(--text-main);
-    font-size: 1.5rem;
+    color: #ffffff;
+    font-size: 1.6rem;
     font-weight: 900;
-    letter-spacing: -0.01em;
+    letter-spacing: -0.02em;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    transition: color 0.4s ease;
+    flex-shrink: 0;
 }
 
-.logo span.text-gold {
+.fixed-nav.scrolled .logo {
+    color: var(--text-main);
+    text-shadow: none;
+}
+
+.logo .text-primary {
+    color: #a2a2ff;
+}
+
+.fixed-nav.scrolled .logo .text-primary {
     color: var(--primary);
 }
 
@@ -223,7 +246,7 @@ body {
     display: none;
     list-style: none;
     align-items: center;
-    gap: 2.5rem;
+    gap: 2rem;
 }
 
 @media (min-width: 768px) {
@@ -232,15 +255,26 @@ body {
     }
 }
 
+/* Nav links: white on hero, muted when scrolled */
 .nav-link {
     text-decoration: none;
-    color: var(--text-muted);
-    font-size: 0.875rem;
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 0.9rem;
     font-weight: 600;
     transition: color 0.2s ease;
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
 }
 
 .nav-link:hover {
+    color: #ffffff;
+}
+
+.fixed-nav.scrolled .nav-link {
+    color: var(--text-muted);
+    text-shadow: none;
+}
+
+.fixed-nav.scrolled .nav-link:hover {
     color: var(--primary);
 }
 
@@ -264,9 +298,15 @@ body {
     display: block;
     width: 24px;
     height: 2px;
-    background: var(--text-main);
+    background: #ffffff;
+    /* White on hero */
     border-radius: 2px;
     transition: 0.3s ease;
+}
+
+.fixed-nav.scrolled .hamburger span {
+    background: var(--text-main);
+    /* Dark when scrolled */
 }
 
 .hamburger.open span:nth-child(1) {
