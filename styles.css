@@ -28,14 +28,22 @@ html {
 }
 
 body {
-    background-color: var(--bg-deep);
+    background-color: #f8faff;
+    /* Cool gray base instead of pure white */
     color: var(--text-main);
     font-family: var(--font-main);
     overflow-x: hidden;
     line-height: 1.6;
 }
 
-/* Utilities */
+.text-primary {
+    color: var(--primary);
+}
+
+.text-white {
+    color: var(--white);
+}
+
 .max-w-7xl {
     max-width: 80rem;
 }
@@ -148,22 +156,22 @@ body {
 .bg-mesh {
     position: fixed;
     inset: 0;
-    z-index: -1;
-    background-color: #060b18;
+    z-index: -10;
     background-image:
-        radial-gradient(at 0% 0%, hsla(217, 100%, 15%, 1) 0, transparent 50%),
-        radial-gradient(at 50% 0%, hsla(222, 47%, 11%, 1) 0, transparent 50%),
-        radial-gradient(at 100% 0%, hsla(45, 67%, 15%, 1) 0, transparent 50%),
-        radial-gradient(at 50% 100%, hsla(217, 100%, 10%, 1) 0, transparent 50%);
-    filter: blur(60px);
+        radial-gradient(at 0% 0%, hsla(232, 100%, 94%, 1) 0, transparent 40%),
+        radial-gradient(at 80% 20%, hsla(242, 100%, 96%, 1) 0, transparent 50%),
+        radial-gradient(at 50% 100%, hsla(232, 100%, 92%, 1) 0, transparent 40%),
+        radial-gradient(at 100% 50%, hsla(210, 100%, 97%, 1) 0, transparent 40%);
     opacity: 0.8;
 }
 
 .bg-grid {
-    background-image:
-        linear-gradient(rgba(201, 162, 39, 0.015) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(201, 162, 39, 0.015) 1px, transparent 1px);
-    background-size: 100px 100px;
+    position: fixed;
+    inset: 0;
+    z-index: -9;
+    background-image: radial-gradient(rgba(97, 97, 255, 0.08) 1.5px, transparent 1.5px);
+    background-size: 50px 50px;
+    opacity: 0.5;
 }
 
 /* Glassmorphism -> Modern Cards */
@@ -394,7 +402,7 @@ body {
 }
 
 /* Gradients */
-.text-gold-gradient {
+.text-primary-gradient {
     background: linear-gradient(135deg, var(--primary) 0%, #a2a2ff 50%, var(--primary) 100%);
     background-size: 200% auto;
     -webkit-background-clip: text;
@@ -446,11 +454,15 @@ body {
 
 /* Sections */
 .section {
+    position: relative;
     padding: 8rem 0;
+    background-color: transparent;
+    /* Allow global backgrounds to show */
 }
 
 .section:nth-of-type(even) {
-    background-color: var(--bg-light);
+    background-color: rgba(240, 243, 255, 0.5);
+    /* Semi-transparent lavender */
 }
 
 .section-title {
