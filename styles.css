@@ -471,7 +471,7 @@ body {
     grid-template-columns: repeat(2, 1fr);
     gap: 3rem;
     padding-top: 3rem;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 @media (min-width: 768px) {
@@ -500,17 +500,64 @@ body {
     letter-spacing: 0.05em;
 }
 
-/* Sections */
+/* Sections — default transparent */
 .section {
     position: relative;
     padding: 8rem 0;
     background-color: transparent;
-    /* Allow global backgrounds to show */
 }
 
+/* Every other white section gets a very soft blue tint */
 .section:nth-of-type(even) {
-    background-color: rgba(240, 243, 255, 0.5);
-    /* Semi-transparent lavender */
+    background-color: rgba(240, 243, 255, 0.6);
+}
+
+/* Dark block sections — Pillars & Why (add class in HTML) */
+.section-dark {
+    background: linear-gradient(135deg, #0f0f2e 0%, #1a1a4e 100%) !important;
+    color: #ffffff;
+}
+
+.section-dark .section-title {
+    color: #ffffff;
+}
+
+.section-dark .text-muted {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.section-dark .glass-card {
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.3);
+}
+
+.section-dark .glass-card:hover {
+    background: rgba(255, 255, 255, 0.10);
+    border-color: rgba(97, 97, 255, 0.5);
+}
+
+.section-dark .card-title-lg,
+.section-dark .card-title-md,
+.section-dark .card-title {
+    color: #ffffff;
+}
+
+.section-dark .pilar-footer {
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.section-dark .tab-container {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.section-dark .tab-btn {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.section-dark .tab-btn:hover,
+.section-dark .tab-btn.active {
+    color: #ffffff;
 }
 
 .section-title {
@@ -533,25 +580,35 @@ body {
 
 /* Icon circle — used in Why section cards */
 .icon-text {
-    width: 80px;
-    height: 80px;
+    width: 110px;
+    height: 110px;
+    min-width: 110px;
     border-radius: 50%;
     background: linear-gradient(135deg, var(--primary) 0%, #a2a2ff 100%);
     color: #ffffff;
-    font-size: 1.6rem;
+    font-size: 1.75rem;
     font-weight: 900;
     display: flex;
     align-items: center;
     justify-content: center;
     margin-bottom: 1.5rem;
     flex-shrink: 0;
-    box-shadow: 0 8px 24px rgba(97, 97, 255, 0.3);
+    overflow: hidden;
+    /* Ensure text NEVER escapes the circle */
+    text-align: center;
+    line-height: 1;
+    box-shadow: 0 8px 32px rgba(97, 97, 255, 0.35);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .glass-card:hover .icon-text {
-    transform: scale(1.1) rotate(5deg);
-    box-shadow: 0 12px 32px rgba(97, 97, 255, 0.45);
+    transform: scale(1.08);
+    box-shadow: 0 14px 40px rgba(97, 97, 255, 0.5);
+}
+
+/* In dark section, icon circles get a slightly lighter gradient */
+.section-dark .icon-text {
+    box-shadow: 0 8px 32px rgba(97, 97, 255, 0.5);
 }
 
 /* Cards & Components */
@@ -625,11 +682,21 @@ body {
 }
 
 .pilar-label {
-    color: var(--gold);
+    color: var(--primary);
     font-weight: 700;
     font-size: 0.875rem;
     text-transform: uppercase;
     letter-spacing: 0.1em;
+}
+
+/* Allow text-gold-gradient as alias for backwards compat */
+.text-gold-gradient {
+    background: linear-gradient(135deg, var(--primary) 0%, #a2a2ff 50%, var(--primary) 100%);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: shine-text 5s linear infinite;
 }
 
 /* Tabs */
