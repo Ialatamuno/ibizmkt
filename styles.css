@@ -253,6 +253,7 @@ body {
     background-clip: text;
     color: transparent;
     /* Fallback */
+    width: fit-content;
 }
 
 .logo:hover {
@@ -1043,6 +1044,8 @@ textarea::placeholder {
 }
 
 .logo-footer {
+    display: inline-block;
+    width: fit-content;
     font-size: 1.875rem;
     font-weight: 900;
     margin-bottom: 1.5rem;
