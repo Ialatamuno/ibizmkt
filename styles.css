@@ -998,10 +998,24 @@ textarea::placeholder {
     box-shadow: 0 10px 25px rgba(97, 97, 255, 0.35);
 }
 
-/* Footer */
+/* Footer - Modern Dark Vibrant */
 .footer {
-    border-top: 1px solid rgba(255, 255, 255, 0.05);
-    padding: 5rem 0 2rem 0;
+    background: var(--bg-dark);
+    color: #ffffff;
+    padding: 6rem 0 3rem 0;
+    position: relative;
+    border-top: none;
+}
+
+.footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: var(--grad-brand);
+    opacity: 0.3;
 }
 
 .footer-top {
@@ -1020,16 +1034,20 @@ textarea::placeholder {
 }
 
 .logo-footer {
-    font-size: 1.5rem;
+    font-size: 1.875rem;
     font-weight: 900;
-    color: var(--white);
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
+    background: var(--grad-brand);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
 .footer-desc {
-    color: var(--text-muted);
-    font-size: 0.875rem;
-    max-width: 20rem;
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 1rem;
+    line-height: 1.6;
+    max-width: 22rem;
 }
 
 .footer-links-grid {
@@ -1063,17 +1081,19 @@ textarea::placeholder {
 
 .footer-list a {
     text-decoration: none;
-    color: var(--text-muted);
-    font-size: 0.875rem;
-    transition: color 0.3s ease;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 0.9375rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
 }
 
 .footer-list a:hover {
     color: var(--white);
+    padding-left: 5px;
 }
 
 .footer-bottom {
-    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
     padding-top: 2rem;
     display: flex;
     flex-direction: column;
@@ -1089,9 +1109,9 @@ textarea::placeholder {
 }
 
 .copyright {
-    color: #555e6e;
-    font-size: 0.75rem;
-    font-weight: 700;
+    color: rgba(255, 255, 255, 0.4);
+    font-size: 0.875rem;
+    font-weight: 500;
 }
 
 .footer-meta {
@@ -1101,9 +1121,9 @@ textarea::placeholder {
 
 .footer-meta a {
     text-decoration: none;
-    color: #555e6e;
-    font-size: 0.75rem;
-    font-weight: 700;
+    color: rgba(255, 255, 255, 0.4);
+    font-size: 0.875rem;
+    font-weight: 500;
     transition: color 0.3s ease;
 }
 
@@ -1143,10 +1163,10 @@ textarea::placeholder {
 }
 
 .mobile-link:hover {
-    color: var(--gold);
+    color: var(--primary);
 }
 
 .btn-mobile {
-    border-bottom: 2px solid var(--gold);
+    border-bottom: 2px solid var(--primary);
     padding: 0.5rem 0;
 }
