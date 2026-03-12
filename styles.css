@@ -239,6 +239,7 @@ body {
 
 /* Logo: Vibrant gradient synchronized with footer */
 .logo {
+    display: inline-block;
     text-decoration: none;
     font-size: 1.7rem;
     font-weight: 900;
@@ -250,18 +251,24 @@ body {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    text-shadow: none;
-    /* Gradient doesn't work well with text-shadow */
+    color: transparent;
+    /* Fallback */
 }
 
 .logo:hover {
     transform: scale(1.05);
 }
 
-/* Removed text-primary override to let the parent gradient show through */
-.logo .text-primary {
-    color: inherit;
+/* Ensure ALL text inside the logo (including spans) is transparent to show the gradient */
+.logo,
+.logo * {
+    -webkit-text-fill-color: transparent !important;
+    color: transparent !important;
+    background-clip: text;
+    -webkit-background-clip: text;
 }
+
+
 
 
 .nav-links {
