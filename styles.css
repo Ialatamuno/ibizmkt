@@ -460,13 +460,13 @@ body {
 }
 
 .hero-title {
-    font-size: clamp(3rem, 9vw, 6.5rem);
+    font-size: clamp(2.5rem, 8vw, 5.25rem);
     font-weight: 900;
     line-height: 1.05;
     letter-spacing: -0.04em;
     margin-bottom: 2rem;
     color: #ffffff;
-    text-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    text-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
     /* Animation call */
     animation: titleSlideUp 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
@@ -757,14 +757,14 @@ body {
     letter-spacing: 0.1em;
 }
 
-/* Allow text-gold-gradient as alias for backwards compat */
+/* Allow text-gold-gradient as alias for backwards compat - NOW VIBRANT */
 .text-gold-gradient {
-    background: linear-gradient(135deg, var(--primary) 0%, #a2a2ff 50%, var(--primary) 100%);
+    background: var(--grad-brand);
     background-size: 200% auto;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    animation: shine-text 5s linear infinite;
+    animation: shine-text 3s linear infinite;
 }
 
 /* Tabs */
