@@ -531,6 +531,29 @@ body {
     line-height: 1.6;
 }
 
+/* Icon circle — used in Why section cards */
+.icon-text {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--primary) 0%, #a2a2ff 100%);
+    color: #ffffff;
+    font-size: 1.6rem;
+    font-weight: 900;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    flex-shrink: 0;
+    box-shadow: 0 8px 24px rgba(97, 97, 255, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.glass-card:hover .icon-text {
+    transform: scale(1.1) rotate(5deg);
+    box-shadow: 0 12px 32px rgba(97, 97, 255, 0.45);
+}
+
 /* Cards & Components */
 .card-title {
     font-size: 1.5rem;
