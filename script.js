@@ -7,8 +7,8 @@ const portfolioData = {
         { title: 'Lanzamientos Premium', desc: 'Organización de congresos, seminarios y experiencias corporativas con estándares globales.', img: 'assets/lanzamientos.png' },
     ],
     marketing: [
-        { title: 'Marketing Digital B2B', desc: 'Estrategias de contenido y pauta digital optimizadas para resultados en el sector corporativo.', img: 'assets/portfolio.png' },
-        { title: 'Branding de Autoridad', desc: 'Desarrollo de identidad y comunicación estratégica diseñada para inspirar confianza y liderazgo.', img: 'assets/portfolio.png' },
+        { title: 'Marketing Digital B2B', desc: 'Estrategias de contenido y pauta digital optimizadas para resultados en el sector corporativo.', img: 'assets/marketing.png' },
+        { title: 'Branding de Autoridad', desc: 'Desarrollo de identidad y comunicación estratégica diseñada para inspirar confianza y liderazgo.', img: 'assets/branding.png' },
         { title: 'Producción de Impacto', desc: 'Contenido audiovisual y presentaciones de alto nivel para juntas directivas y mercados regionales.', img: 'assets/portfolio.png' },
         { title: 'Trade Marketing', desc: 'Optimización de presencia en punto de venta y herramientas de soporte para fuerzas comerciales locales.', img: 'assets/portfolio.png' },
     ],
