@@ -52,6 +52,41 @@ mobileLinks.forEach(link => {
 const tabBtns = document.querySelectorAll('.tab-btn');
 const portfolioGrid = document.getElementById('portfolio-grid');
 
+// Portfolio Modal Elements
+const portfolioModal = document.getElementById('portfolio-modal');
+const modalImg = document.getElementById('modal-img');
+const modalTitle = document.getElementById('modal-title');
+const modalDesc = document.getElementById('modal-desc');
+const modalClose = document.getElementById('modal-close');
+
+function openModal(item) {
+    modalImg.src = item.img;
+    modalImg.alt = item.title;
+    modalTitle.textContent = item.title;
+    modalDesc.textContent = item.desc;
+    portfolioModal.classList.remove('hidden');
+    document.body.classList.add('overflow-hidden');
+}
+
+function closeModal() {
+    portfolioModal.classList.add('hidden');
+    document.body.classList.remove('overflow-hidden');
+}
+
+if (modalClose) {
+    modalClose.addEventListener('click', closeModal);
+}
+if (portfolioModal) {
+    portfolioModal.addEventListener('click', (e) => {
+        if (e.target === portfolioModal) closeModal();
+    });
+}
+
+// Close modal on Escape key
+window.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeModal();
+});
+
 function renderPortfolio(category) {
     const items = portfolioData[category];
     portfolioGrid.innerHTML = items.map((item, i) => `
@@ -60,9 +95,24 @@ function renderPortfolio(category) {
                 <img src="${item.img}" alt="${item.title}" class="portfolio-img">
             </div>
             <h4 class="card-title-md">${item.title}</h4>
-            <p class="text-muted text-base">${item.desc}</p>
+            <p class="text-muted text-base mb-6" style="display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;">${item.desc}</p>
+            <button class="btn-view-more" data-category="${category}" data-index="${i}">
+                Ver más
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M5 12h14M12 5l7 7-7 7"></path>
+                </svg>
+            </button>
         </div>
     `).join('');
+
+    // Attach listeners
+    portfolioGrid.querySelectorAll('.btn-view-more').forEach(btn => {
+        btn.addEventListener('click', () => {
+            const cat = btn.dataset.category;
+            const idx = btn.dataset.index;
+            openModal(portfolioData[cat][idx]);
+        });
+    });
 }
 
 tabBtns.forEach(btn => {
