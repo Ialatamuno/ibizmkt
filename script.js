@@ -9,13 +9,13 @@ const portfolioData = {
     marketing: [
         { title: 'Marketing Digital B2B', desc: 'Estrategias de contenido y pauta digital optimizadas para resultados en el sector corporativo.', img: 'assets/marketing.png' },
         { title: 'Branding de Autoridad', desc: 'Desarrollo de identidad y comunicación estratégica diseñada para inspirar confianza y liderazgo.', img: 'assets/branding.png' },
-        { title: 'Producción de Impacto', desc: 'Contenido audiovisual y presentaciones de alto nivel para juntas directivas y mercados regionales.', img: 'assets/portfolio.png' },
-        { title: 'Trade Marketing', desc: 'Optimización de presencia en punto de venta y herramientas de soporte para fuerzas comerciales locales.', img: 'assets/portfolio.png' },
+        { title: 'Producción de Impacto', desc: 'Contenido audiovisual y presentaciones de alto nivel para juntas directivas y mercados regionales.', img: 'assets/produccion.png' },
+        { title: 'Trade Marketing', desc: 'Optimización de presencia en punto de venta y herramientas de soporte para fuerzas comerciales locales.', img: 'assets/trade.png' },
     ],
     intel: [
-        { title: 'Análisis de Mercado', desc: 'Estudios profundos de competencia y viabilidad para la entrada exitosa en nuevos mercados de Latam.', img: 'assets/portfolio.png' },
-        { title: 'Auditoría Estratégica', desc: 'Diagnóstico de operaciones actuales y diseño de roadmaps de crecimiento a corto y mediano plazo.', img: 'assets/portfolio.png' },
-        { title: 'Planes de Expansión', desc: 'Consultoría especializada en las particularidades regulatorias y comerciales de cada país de la región.', img: 'assets/portfolio.png' },
+        { title: 'Análisis de Mercado', desc: 'Estudios profundos de competencia y viabilidad para la entrada exitosa en nuevos mercados de Latam.', img: 'assets/analisis.png' },
+        { title: 'Auditoría Estratégica', desc: 'Diagnóstico de operaciones actuales y diseño de roadmaps de crecimiento a corto y mediano plazo.', img: 'assets/auditoria.png' },
+        { title: 'Planes de Expansión', desc: 'Consultoría especializada en las particularidades regulatorias y comerciales de cada país de la región.', img: 'assets/expansion.png' },
     ],
 };
 
