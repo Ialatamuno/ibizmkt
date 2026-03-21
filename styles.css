@@ -637,6 +637,38 @@ body {
     color: #ffffff;
 }
 
+/* Icon Badges (Circles / Rounded Squares) */
+.icon-text {
+    width: 100px;
+    height: 100px;
+    min-width: 100px;
+    border-radius: 2rem;
+    /* Modern rounded square appearance */
+    background: var(--grad-brand);
+    color: #ffffff;
+    font-size: 1.75rem;
+    font-weight: 900;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    flex-shrink: 0;
+    overflow: hidden;
+    text-align: center;
+    line-height: 1;
+    box-shadow: 0 8px 32px rgba(124, 58, 237, 0.35);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.glass-card:hover .icon-text {
+    transform: scale(1.08);
+    box-shadow: 0 14px 40px rgba(124, 58, 237, 0.5);
+}
+
+.section-dark .icon-text {
+    box-shadow: 0 8px 32px rgba(124, 58, 237, 0.5);
+}
+
 .section-title {
     font-size: clamp(2.5rem, 6vw, 4rem);
     font-weight: 900;
