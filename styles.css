@@ -135,6 +135,54 @@ body {
     margin-top: 2rem;
 }
 
+/* Padding utilities — using !important to ensure consistency across glass cards */
+.p-8 {
+    padding: 2rem !important;
+}
+
+.p-10 {
+    padding: 2.5rem !important;
+}
+
+.p-12 {
+    padding: 3rem !important;
+}
+
+/* Gap utilities */
+.gap-4 {
+    gap: 1rem;
+}
+
+.gap-8 {
+    gap: 2rem;
+}
+
+.gap-24 {
+    gap: 6rem;
+}
+
+/* Items center */
+.items-center {
+    align-items: center;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+.flex {
+    display: flex;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.py-16 {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+}
+
 /* Grid Layouts */
 .grid-2-cols {
     display: grid;
@@ -205,7 +253,8 @@ body {
     backdrop-filter: blur(12px);
     transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
     position: relative;
-    overflow: hidden;
+    /* Removed overflow: hidden to prevent clipping form labels and decorative elements */
+    overflow: visible;
 }
 
 .glass-card::before {
@@ -642,8 +691,8 @@ body {
     width: 100px;
     height: 100px;
     min-width: 100px;
-    border-radius: 2rem;
-    /* Modern rounded square appearance */
+    border-radius: 50%;
+    /* True circle */
     background: var(--grad-brand);
     color: #ffffff;
     font-size: 1.75rem;
@@ -651,17 +700,19 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 1.5rem;
+    margin-bottom: 2rem;
     flex-shrink: 0;
-    overflow: hidden;
+    overflow: visible;
+    /* Avoid clipping symbols */
     text-align: center;
-    line-height: 1;
+    line-height: 0;
+    /* Reset line-height to help vertical centering in flexbox */
     box-shadow: 0 8px 32px rgba(124, 58, 237, 0.35);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .glass-card:hover .icon-text {
-    transform: scale(1.08);
+    transform: scale(1.1) rotate(5deg);
     box-shadow: 0 14px 40px rgba(124, 58, 237, 0.5);
 }
 
@@ -701,39 +752,6 @@ body {
 .text-lg {
     font-size: 1.125rem;
     line-height: 1.6;
-}
-
-/* Icon circle — used in Why section cards */
-.icon-text {
-    width: 110px;
-    height: 110px;
-    min-width: 110px;
-    border-radius: 50%;
-    background: linear-gradient(135deg, var(--primary) 0%, #a2a2ff 100%);
-    color: #ffffff;
-    font-size: 1.75rem;
-    font-weight: 900;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 1.5rem;
-    flex-shrink: 0;
-    overflow: hidden;
-    /* Ensure text NEVER escapes the circle */
-    text-align: center;
-    line-height: 1;
-    box-shadow: 0 8px 32px rgba(97, 97, 255, 0.35);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.glass-card:hover .icon-text {
-    transform: scale(1.08);
-    box-shadow: 0 14px 40px rgba(97, 97, 255, 0.5);
-}
-
-/* In dark section, icon circles get a slightly lighter gradient */
-.section-dark .icon-text {
-    box-shadow: 0 8px 32px rgba(97, 97, 255, 0.5);
 }
 
 /* Cards & Components */
@@ -1139,7 +1157,25 @@ body {
     font-size: 0.875rem;
     font-weight: 700;
     margin-bottom: 0.75rem;
+    letter-spacing: 0.01em;
 }
+
+/* Form card: ensuring visibility and padding for labels */
+#contact-card {
+    padding: 3rem !important;
+    overflow: visible !important;
+}
+
+#contact-card:hover {
+    transform: none;
+}
+
+/* Ensure form container fills its card with padding fallback */
+#form-container {
+    padding: 0;
+}
+
+
 
 input,
 textarea {
@@ -1153,45 +1189,6 @@ textarea {
     outline: none;
     transition: all 0.2s ease;
     font-family: var(--font-main);
-}
-
-.glass-card {
-    background: linear-gradient(145deg, rgba(255, 255, 255, 0.95) 0%, rgba(248, 250, 252, 0.8) 100%);
-    border: 1px solid rgba(124, 58, 237, 0.08);
-    border-radius: var(--radius-lg);
-    box-shadow:
-        0 4px 6px -1px rgba(0, 0, 0, 0.05),
-        0 10px 15px -3px rgba(124, 58, 237, 0.05);
-    backdrop-filter: blur(12px);
-    transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
-    position: relative;
-    overflow: hidden;
-}
-
-.glass-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 3px;
-    background: var(--grad-brand);
-    opacity: 0;
-    transition: opacity 0.4s ease;
-}
-
-.glass-card:hover::before {
-    opacity: 1;
-}
-
-.glass-card:hover {
-    transform: translateY(-8px);
-    box-shadow: var(--shadow-xl);
-    border-color: rgba(124, 58, 237, 0.2);
-}
-
-.card-accent-border {
-    border-left: 4px solid var(--primary);
 }
 
 input:focus,
